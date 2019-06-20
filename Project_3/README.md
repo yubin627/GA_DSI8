@@ -11,7 +11,7 @@ As a diehard fan of Harry Potter series, the characters and the events in the bo
 
 This project aims to propose a classification model that would be able to help aggregate the posts more accurately based on the title and the body text of the post. To achieve this, I selected and evaluated a few classification models using Natural Language Processing (NLP) tools.
 
-Our chosen subreddits to compare are:
+The subreddits chosen to compare are:
 
 - [**r/harrypotter**](https://www.reddit.com/r/harrypotter/)
 - [**r/FantasticBeasts**](https://www.reddit.com/r/FantasticBeasts/)
