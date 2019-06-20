@@ -81,7 +81,7 @@ Multinomial Naive-Bayes Train/Test Accuracy score: 96.8%/93.3%
 
 ### Takeaway from the modeling process
 
-There is no 'best' solution that fits all problems. In this case, Lemmatizing and Stemming doesn't help further improve the model, possibly because the distinctive words that are unique to the novels. 
+There is no 'best' solution that fits all problems. In this case, Lemmatizing and Stemming doesn't help further improve the model, possibly because the coined words unique to the novels are what differentiate the two classes, so they should be preserved as they are. 
 
 Logistic Regression and Random Forest seem extremely capable in fitting the training data (~100% accuracy score), but tend to overfit.
 
