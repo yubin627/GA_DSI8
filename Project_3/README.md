@@ -2,7 +2,7 @@
 
 ### Problem Statement
 
-Use NLP to train a classifier to tell which of the two selected subreddits a given post came from.
+Use NLP to train a classifier to tell which of the two selected subreddits a given post should come from.
 
 
 #### Executive Summary
@@ -63,7 +63,7 @@ The following variables were used:
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
-|**all_text**|*string*|A concatenated string of post title and the body text|
+|**all_text**|*string*|X_train,X_test|A concatenated string of post title and the body text|
 |**post**|*string*|X_train,X_test|Variable **all_text**, with tokenizing using basic regular expression to extract words| 
 |**post_st**|*string*|X_train,X_test|Variable **post** with stemming|
 |**post_lm**|*string*|X_train,X_test|Variable **post** with lemmatizing|
@@ -92,4 +92,4 @@ Logistic Regression and Random Forest seem extremely capable in fitting the trai
 
 Use ensemble modeling - sklearn’s VotingClassifier to improve accuracy
 
-Collect new data to further evaluate and optimize the model
+Collect new posts from the subreddits to further evaluate and optimize the model
