@@ -13,8 +13,8 @@ This project aims to propose a classification model that would be able to help a
 
 Our chosen subreddits to compare are:
 
-- r/harrypotter
-- r/FantasticBeasts
+- [**r/harrypotter**](https://www.reddit.com/r/harrypotter/)
+- [**r/FantasticBeasts**](https://www.reddit.com/r/FantasticBeasts/)
 
 ---
 
@@ -64,10 +64,10 @@ The following variables were used:
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
 |**all_text**|*string*|A concatenated string of post title and the body text|
-|**post**|*string*|hp_df & fb_df|Variable **all_text**, with tokenizing using basic regular expression to extract words| 
-|**post_st**|*string*|Variable **post** with stemming|
-|**post_lm**|*string*|Variable **post** with lemmatizing|
-|**is_hp**|*integer*|Target variable, 1 represents Harry Potter subreddit and 0 for Fantastic Beasts
+|**post**|*string*|X_train,X_test|Variable **all_text**, with tokenizing using basic regular expression to extract words| 
+|**post_st**|*string*|X_train,X_test|Variable **post** with stemming|
+|**post_lm**|*string*|X_train,X_test|Variable **post** with lemmatizing|
+|**is_hp**|*integer*|y_train,y_test|Target variable, 1 represents Harry Potter subreddit and 0 for Fantastic Beasts
 
 ---
 
@@ -91,4 +91,5 @@ Logistic Regression and Random Forest seem extremely capable in fitting the trai
 ### Next steps
 
 Use ensemble modeling - sklearn’s VotingClassifier to improve accuracy
+
 Collect new data to further evaluate and optimize the model
