@@ -83,6 +83,22 @@ Multinomial Naive-Bayes Train/Test Accuracy score: 96.9%/93.0%
 
 There is no 'best' solution that fits all problems. In this case, Lemmatizing and Stemming doesn't help further improve the model, possibly because the coined words (character names) unique to the novels are what differentiate the two classes, so as long as they are preserved the models perform reasonably well. 
 
+The top 5 features found from the best model is:
+
+**Fantastic Beasts**
+1037.0 grindelwald
+716.0 credence
+698.0 dumbledore
+579.0 movie
+567.0 newt
+
+**Harry Potter**
+2216.0 harry
+915.0 potter
+524.0 voldemort
+513.0 books
+468.0 hogwarts
+
 Logistic Regression and Random Forest seem extremely capable in fitting the training data (~100% accuracy score), but had a higher tendency to overfit than other models.
 
 
