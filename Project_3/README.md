@@ -75,7 +75,7 @@ The following variables were used:
 
 With a few iterations, the model that we found most accurate is the MultinomialNB on CountVectorizer with basic tokenizing (no stemming or lemmatizing).
 
-Multinomial Naive-Bayes Train/Test Accuracy score: 96.8%/93.3%
+Multinomial Naive-Bayes Train/Test Accuracy score: 96.9%/93.0%
 
 ---
 
