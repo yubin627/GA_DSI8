@@ -40,9 +40,9 @@ Tested vectorizing methods include:
 Tested classifiers include:
 - Multinomial Naive Bayes
 - K-Nearest-Neighbors
-- Logistic Regression,
-- Random Forest,
-- AdaBoost,
+- Logistic Regression
+- Random Forest
+- AdaBoost
 - Gradient Boosting
 
 Steps taken to identify the best combination are illustrated in the images below:
