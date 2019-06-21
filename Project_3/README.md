@@ -18,6 +18,21 @@ The subreddits chosen to compare are:
 
 ---
 
+### Data Dictionary
+
+The following variables were used:
+
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**all_text**|*string*|X_train,X_test|A concatenated string of post title and the body text|
+|**post**|*string*|X_train,X_test|Variable **all_text**, with tokenizing using basic regular expression to extract words| 
+|**post_st**|*string*|X_train,X_test|Variable **post** with stemming|
+|**post_lm**|*string*|X_train,X_test|Variable **post** with lemmatizing|
+|**is_hp**|*integer*|y_train,y_test|Target variable, 1 represents Harry Potter subreddit and 0 for Fantastic Beasts
+
+
+---
+
 ### Data Science Process
 
 
@@ -55,19 +70,6 @@ Steps taken to identify the best combination are illustrated in the images below
 
 ![image info](image/step_4.png)
 
----
-
-### Data Dictionary
-
-The following variables were used:
-
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|**all_text**|*string*|X_train,X_test|A concatenated string of post title and the body text|
-|**post**|*string*|X_train,X_test|Variable **all_text**, with tokenizing using basic regular expression to extract words| 
-|**post_st**|*string*|X_train,X_test|Variable **post** with stemming|
-|**post_lm**|*string*|X_train,X_test|Variable **post** with lemmatizing|
-|**is_hp**|*integer*|y_train,y_test|Target variable, 1 represents Harry Potter subreddit and 0 for Fantastic Beasts
 
 ---
 
