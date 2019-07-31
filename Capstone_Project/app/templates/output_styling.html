@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://capstone-deepfashion.s3.us-east-2.amazonaws.com/clothing.jpg");
+  
+  /* Add the blur effect */
+  /*filter: blur(8px);*/
+  /*-webkit-filter: blur(8px);*/
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+    
+<div class="bg-image"></div>
+
+
+
+<div class="bg-text">
+    
+<body>
+  
+  <h2>Are you looking for something like these?</h2>
+  <h5>You can continue to click the images below to find out more or </h5>
+  <h5>click
+  <button onclick="location.href='https://deepfashion-finder.herokuapp.com/'" type="button">
+        RETURN</button> to go back to the random image generator
+  </h5>
+
+{% if RESULTS_ARRAY %}
+
+<div class="responsive">
+  <div class="gallery">
+    <form action="results" method="post">
+        <input type="hidden" name="imagesrc" value = "{{ RESULTS_ARRAY[0]['image'] }}">
+        <input type="image" name="submit" src="{{ RESULTS_ARRAY[0]['image'] }}" border="0" alt="Submit" style="width: 200px;" />
+    </form>
+
+    <div class="desc">Score: {{ RESULTS_ARRAY[0]['score'] }}</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+      <form action="results" method="post">
+          <input type="hidden" name="imagesrc" value = "{{ RESULTS_ARRAY[1]['image'] }}">
+          <input type="image" name="submit" src="{{ RESULTS_ARRAY[1]['image'] }}" border="0" alt="Submit" style="width: 200px;" />
+      </form>
+  
+      <div class="desc">Score: {{ RESULTS_ARRAY[1]['score'] }}</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <form action="results" method="post">
+          <input type="hidden" name="imagesrc" value = "{{ RESULTS_ARRAY[2]['image'] }}">
+          <input type="image" name="submit" src="{{ RESULTS_ARRAY[2]['image'] }}" border="0" alt="Submit" style="width: 200px;" />
+      </form>
+  
+      <div class="desc">Score: {{ RESULTS_ARRAY[2]['score'] }}</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+      <form action="results" method="post">
+          <input type="hidden" name="imagesrc" value = "{{ RESULTS_ARRAY[3]['image'] }}">
+          <input type="image" name="submit" src="{{ RESULTS_ARRAY[3]['image'] }}" border="0" alt="Submit" style="width: 200px;"/>
+      </form>
+  
+      <div class="desc">Score: {{ RESULTS_ARRAY[3]['score'] }}</div>
+    </div>
+</div>
+{% else %}
+No results :(
+{% endif %}
+
+
+</body>
+</div>
+</html>
+
