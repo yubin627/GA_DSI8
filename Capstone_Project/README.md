@@ -1,6 +1,6 @@
 
 ## Codes - for the modeling 
-{% highlight html %}
+```bash
 
 ├── 01_train.ipynb
 ├── 02_feature_extraction.ipynb
@@ -13,11 +13,11 @@
 │   
 └── requirements.txt
 
-{% endhighlight %}
+```
 
 ## App - for deployment on Heroku with Flask
 
-{% highlight html %}
+```bash
 
 ├── app.py
 ├── config.py
@@ -42,5 +42,5 @@
     ├── output_styling.html
     └── query_styling.html  
 
-{% endhighlight %}
+```
 
