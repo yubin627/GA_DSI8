@@ -40,7 +40,7 @@
 └── templates
     ├── input_page.html
     ├── output_styling.html
-    └── query_styling.html
+    └── query_styling.html  
 
 {% endhighlight %}
 
