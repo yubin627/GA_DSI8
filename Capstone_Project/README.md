@@ -17,6 +17,8 @@
 
 ## App - for deployment on Heroku with Flask
 
+Check out the [web app](https://deepfashion-finder.herokuapp.com/)
+
 ```bash
 
 ├── app.py
