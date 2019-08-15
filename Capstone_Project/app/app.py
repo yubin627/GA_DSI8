@@ -56,7 +56,7 @@ def result():
 		# loop over the results, displaying the score and image name
 		for (path, score) in result:
 			RESULTS_ARRAY.append(
-				{"image": str(static_path+path), "score": round(float(score),2), \
+				{"image": str(static_path+path), "score": str("{:.2f}%".format(float(1/(float(score) + 1)*100))), \
                  "title": re.search('img\/(.*)\/',path).group(0)})		
 
 		return flask.render_template('output_styling.html',RESULTS_ARRAY=RESULTS_ARRAY)
